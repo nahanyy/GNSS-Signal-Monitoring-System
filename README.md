@@ -1,15 +1,13 @@
-# GNSS-Signal-Monitoring-System
+# Zero-Shot-GNSS-Detection
 
-This repository contains the implementation code for the system described in the paper “Design and Implementation of an LLM-Driven Real-Time GNSS Signal Monitoring System”.
+his repository contains the implementation code for the paper
+“A Zero-Shot Framework for GNSS Spoofing and Jamming Detection by Infusing Cluster Semantics into Large Language Models.”
 
-The provided example demonstrates binary classification of GNSS signals (normal vs. spoofing). The GNSS jamming detection part follows a similar structure — you only need to replace it with the corresponding dataset.
+AE.py: dual-branch CNN autoencoder for unsupervised latent feature extraction from multi-dimensional GNSS observations.
 
-Training dataset: derived from the paper “GNSS interference and spoofing dataset”.
+feature.py: computes statistical cluster representations based on the latent features.
 
-VGG.py: model training code (VGG-based classifier).
+prompt.py: generates cluster-level semantic descriptions for LLM-based zero-shot detection.
 
-artifacts_matrix_stats.py: generates Chinese descriptive text of matrix statistical features.
-
-database.py: builds a knowledge base from training samples for later use in LLM-based retrieval-augmented generation (RAG).
-
-Currently, the code provided here corresponds to the offline part of the system. Data preprocessing code and online system code will be released in future updates. 
+These scripts correspond to the offline part of the framework.
+Additional modules (evaluation, visualization, and online inference workflow) will be released in future updates.
